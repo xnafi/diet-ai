@@ -3,9 +3,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --primaryColor: #3f1c12;
-  --secondaryColor: #b98b5c;
-  --infoColor: #2d140d;
+  --primaryColor: #606483;
+  --secondaryColor: #CDF87F;
+  --infoColor: #121213;
 }
 html {
   background: white;
@@ -13,48 +13,41 @@ html {
 @theme inline {
   --color-background: white;
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-nunito-sans);
 }
 @layer utilities {
   .container {
     @apply max-w-[1440px] px-4 py-10 mx-auto ;
   }
-  .primaryColor {
-    @apply text-[#B98B5C];
-  }
-  .primaryBg {
-    @apply bg-[#B98B5C];
-  }
   .secondaryColor {
-    @apply text-[#d63a76];
+    @apply text-[#CDF87F];
+  }
+  .secondaryColorBg {
+    @apply bg-[#CDF87F];
+  }
+  .primaryColor {
+    @apply text-[#606483];
   }
   .hover {
-    @apply hover:text-[#b98b5c] transition-all  duration-500;
+    @apply hover:text-[#CDF87F] transition-all  duration-500;
   }
-  .secondaryBg {
-    @apply bg-[#d63a76];
+  .primaryBg {
+    @apply bg-[#606483];
   }
   .infoColor {
-    @apply text-[#0aeae2];
-  }
-  .extraColor {
-    @apply text-[#eba594];
-  }
-  .extraBg {
-    @apply bg-[#eba594];
+    @apply text-[#121213];
   }
 
   .hero-heading {
-    @apply text-[22px] lg:text-[48px] 2xl:text-[62px] font-bold uppercase text-[#3F1C12];
+    @apply text-[28px] lg:text-[45px] 2xl:text-[56px] font-semibold text-[#121213];
   }
   .sub-heading {
-    @apply text-2xl lg:text-[32px] 2xl:text-[38px] font-bold text-[#3F1C12];
+    @apply text-2xl lg:text-[32px] 2xl:text-[44px] font-semibold text-[#121213];
   }
   .sub-heading-para {
     @apply text-[22px] md:text-[28px] font-bold;
   }
   .para-text {
-    @apply text-[16px] md:text-[16px] font-normal text-[#2d140d];
+    @apply text-[16px] md:text-[18px] font-normal text-[#606483];
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -67,6 +60,5 @@ html {
 body {
   background: #ffffff m !important;
   color: black;
-  font-family: "Nunito", sans-serif;
 }
 
