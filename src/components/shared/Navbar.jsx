@@ -1,10 +1,11 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import logo from "../../assets/logo.png";
 import Button from "../buttons/Button";
 import InfoBar from "./InfoBar";
 
-// nav links
 const navLink = [
   {
     name: "Resources",
@@ -33,35 +34,32 @@ const Navbar = () => {
     <>
       {/* info bar */}
       <InfoBar />
-
-      {/* navbar starts */}
-      <nav className="shw-full z-10 bg-white container !py-0">
-        <div className="flex items-center justify-between py-4">
+      {/* nav bar */}
+      <nav className="w-full z-50">
+        <div className="container !py-4 mx-auto flex items-center justify-between relative">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link href="/">
-              <Image
-                src={logo}
-                width={137}
-                height={100}
-                alt="logo"
-                style={{ width: "137px", height: "auto" }}
-              />
-            </Link>
-          </div>
+          <Link href="/" className="flex-shrink-0">
+            <Image
+              src={logo}
+              width={137}
+              height={100}
+              alt="logo"
+              className="w-[137px]"
+            />
+          </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden lg:flex space-x-10 relative">
+          <div className="hidden lg:flex space-x-8 items-center">
             {navLink.map((link, index) => (
-              <div key={index} className="group relative">
+              <div key={index} className="relative group">
                 <Link
                   href={link.href}
-                  className="nav-link uppercase flex items-center gap-1"
+                  className="capitalize flex items-center gap-1 paraText transition"
                 >
                   {link.name}
                   {link.subMenu && (
                     <svg
-                      className="w-3 h-3 text-gray-600 group-hover:rotate-180 transition-transform duration-300"
+                      className="w-3 h-3 group-hover:rotate-180 transition-transform duration-500"
                       fill="none"
                       stroke="currentColor"
                       strokeWidth={2}
@@ -78,25 +76,22 @@ const Navbar = () => {
 
                 {/* Desktop Dropdown */}
                 {link.subMenu && (
-                  <div
-                    className="absolute left-0 mt-2 bg-white shadow-lg rounded-lg opacity-0 
-                             invisible group-hover:opacity-100 group-hover:visible
-                             translate-y-2 group-hover:translate-y-0
-                             transition-all duration-300 ease-in-out"
+                  <ul
+                    className="absolute left-0 mt-2 bg-white shadow-lg rounded-lg min-w-[180px] 
+                             opacity-0 invisible group-hover:visible group-hover:opacity-100
+                             transition-all duration-500 pointer-events-auto z-50"
                   >
-                    <ul className="py-2 px-4 space-y-2 min-w-[160px]">
-                      {link.subMenu.map((item, subIndex) => (
-                        <li key={subIndex}>
-                          <Link
-                            href={item.href}
-                            className="block text-gray-700 hover:text-green-600 transition"
-                          >
-                            {item.label}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                    {link.subMenu.map((item, subIndex) => (
+                      <li key={subIndex}>
+                        <Link
+                          href={item.href}
+                          className="block px-4 py-2 paraText transition"
+                        >
+                          {item.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
                 )}
               </div>
             ))}
@@ -104,15 +99,20 @@ const Navbar = () => {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex">
-            <Button textPl={4}>{"Start For Free"}</Button>
+            <Button textPl={6}>Start For Free</Button>
           </div>
 
-          {/* Mobile Menu Toggle */}
+          {/* Mobile Menu */}
           <div className="lg:hidden">
             <input type="checkbox" id="menu-toggle" className="hidden peer" />
-            <label htmlFor="menu-toggle" className="cursor-pointer">
+
+            {/* Hamburger */}
+            <label
+              htmlFor="menu-toggle"
+              className="cursor-pointer z-50 relative"
+            >
               <svg
-                className="w-6 h-6"
+                className="w-6 h-6 text-gray-800"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2}
@@ -126,12 +126,15 @@ const Navbar = () => {
               </svg>
             </label>
 
-            {/* Mobile Nav */}
-            <div className="peer-checked:block hidden absolute top-0 left-0 w-64 h-screen bg-white shadow-lg z-20 p-6">
+            {/* Overlay to lock background scroll */}
+            <div className="peer-checked:fixed peer-checked:inset-0 peer-checked:bg-black/20 peer-checked:overflow-hidden"></div>
+
+            {/* Mobile Sidebar */}
+            <div className="peer-checked:translate-x-0 -translate-x-full transition-transform duration-300 fixed top-0 left-0 w-64 h-screen bg-white shadow-lg z-50 p-6 overflow-y-auto">
               <div className="flex justify-end mb-6">
                 <label htmlFor="menu-toggle" className="cursor-pointer">
                   <svg
-                    className="w-6 h-6"
+                    className="w-6 h-6 text-gray-800"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth={2}
@@ -146,12 +149,11 @@ const Navbar = () => {
                 </label>
               </div>
 
-              <nav className="space-y-4 flex flex-col">
+              <nav className="flex flex-col space-y-4">
                 {navLink.map((link, index) => (
-                  <div key={index}>
+                  <div key={index} className="flex flex-col">
                     {link.subMenu ? (
                       <>
-                        {/* Submenu Toggle */}
                         <input
                           type="checkbox"
                           id={`submenu-${index}`}
@@ -159,7 +161,7 @@ const Navbar = () => {
                         />
                         <label
                           htmlFor={`submenu-${index}`}
-                          className="w-full nav-link uppercase flex justify-between items-center cursor-pointer"
+                          className="w-full flex justify-between items-center capitalize cursor-pointer text-gray-800 hover:text-green-600 transition"
                         >
                           {link.name}
                           <svg
@@ -177,11 +179,7 @@ const Navbar = () => {
                           </svg>
                         </label>
 
-                        {/* Mobile Submenu */}
-                        <div
-                          className="max-h-0 overflow-hidden transition-all duration-300 ease-in-out 
-                                   peer-checked:max-h-40"
-                        >
+                        <div className="max-h-0 overflow-hidden transition-all duration-300 ease-in-out peer-checked:max-h-40">
                           <ul className="pl-4 mt-2 space-y-2">
                             {link.subMenu.map((item, subIndex) => (
                               <li key={subIndex}>
@@ -197,13 +195,16 @@ const Navbar = () => {
                         </div>
                       </>
                     ) : (
-                      <Link href={link.href} className="nav-link uppercase">
+                      <Link
+                        href={link.href}
+                        className="capitalize text-gray-800 hover:text-green-600 transition"
+                      >
                         {link.name}
                       </Link>
                     )}
                   </div>
                 ))}
-                <Button textPl="1">{"Start for free"}</Button>
+                <Button textPl={7}>Start For Free</Button>
               </nav>
             </div>
           </div>

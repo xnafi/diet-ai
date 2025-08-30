@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="md:col-span-1 space-y-4 max-w-sm">
           <div className="flex items-center gap-2">
             {/* Logo */}
-            <Link href="/" className="paraText cursor-pointer" nk href="/">
+            <Link href="/" className="paraText cursor-pointer">
               <Image
                 src={logo}
                 width={137}
