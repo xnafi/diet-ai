@@ -2,17 +2,12 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
   --primaryColor: #606483;
   --secondaryColor: #CDF87F;
   --infoColor: #121213;
 }
 html {
   background: white;
-}
-@theme inline {
-  --color-background: white;
-  --color-foreground: var(--foreground);
 }
 @layer utilities {
   .container {
@@ -53,15 +48,10 @@ html {
     @apply text-[16px] font-medium text-[#606483] capitalize;
   }
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+
 
 body {
-  background: #ffffff m !important;
+  background: #ffffff !important;
   color: black;
 }
 
