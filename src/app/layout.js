@@ -1,5 +1,6 @@
 import { Inter_Tight } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/shared/Navbar";
 
 const interTight = Inter_Tight({
   subsets: ["latin"],
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${interTight.variable} font-inter-tight`}>
+        <Navbar />
         {children}
       </body>
     </html>

@@ -47,7 +47,10 @@ html {
     @apply text-[22px] md:text-[28px] font-bold;
   }
   .para-text {
-    @apply text-[16px] md:text-[18px] font-normal text-[#606483];
+    @apply text-[16px] md:text-[16px] font-normal text-[#606483];
+  }
+  .nav-link {
+    @apply text-[16px] font-medium text-[#606483] capitalize;
   }
 }
 @media (prefers-color-scheme: dark) {
