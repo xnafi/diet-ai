@@ -39,7 +39,7 @@ export default function DownloadNow() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: true }}
-          className="flex justify-center md:justify-end space-x-5 flex-col md:flex-row md:space-y-0 space-y-6"
+          className="flex justify-center lg:justify-end lg:space-x-5 flex-col md:flex-row lg:space-y-0 space-y-6 items-center"
         >
           <Image
             src={phone2}
