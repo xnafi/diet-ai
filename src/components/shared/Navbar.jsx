@@ -104,7 +104,7 @@ const Navbar = () => {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex">
-            <Button>{"Start For Free"}</Button>
+            <Button textPl={4}>{"Start For Free"}</Button>
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -203,7 +203,7 @@ const Navbar = () => {
                     )}
                   </div>
                 ))}
-                <Button>{"Start for free"}</Button>
+                <Button textPl="1">{"Start for free"}</Button>
               </nav>
             </div>
           </div>
