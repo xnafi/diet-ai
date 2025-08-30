@@ -134,11 +134,11 @@ export default function TrackNutrition() {
           title="Progress Analysis"
           description="Visualize your nutrition journey with detailed charts to keep you motivated."
         >
-          <div className="bg-gray-50 rounded-xl p-4 text-center">
+          <div className="bg-gray-50 rounded-xl p-2 lg:p-4 text-center">
             <h4 className="font-semibold text-gray-800 mb-3 text-[20px]">
               Daily Weight Report
             </h4>
-            <div className="space-y-4">
+            <div className="space-y-4 w-full h-full">
               {/* card 1 */}
               <div className="flex flex-col space-y-2 bg-[#F8FAFB] rounded-lg shadow-md h-full w-full p-6">
                 <div className="flex justify-between items-center flex-col lg:flex-row space-y-3 lg:space-y-0">
