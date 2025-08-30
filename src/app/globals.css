@@ -11,7 +11,7 @@ html {
 }
 @layer utilities {
   .container {
-    @apply max-w-[1440px] px-4 py-10 mx-auto ;
+    @apply max-w-[1296px] px-4 py-10 mx-auto ;
   }
   .secondaryColor {
     @apply text-[#CDF87F];
