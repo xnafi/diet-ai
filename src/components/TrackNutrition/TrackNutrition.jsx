@@ -34,7 +34,6 @@ export default function TrackNutrition() {
       </div>
 
       {/* Grid Layout */}
-      {/* Grid Layout */}
       <div className="grid md:grid-cols-2 gap-6">
         {/* Photo Recognition */}
         <NutritionCard
