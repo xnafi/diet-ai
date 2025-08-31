@@ -54,6 +54,7 @@ body {
   color: black;
 }
 
+/* used for hero bg gradient */
 .bgWrap {
   z-index: -1;
   --c: 70px;
@@ -65,6 +66,8 @@ body {
     rgba(205, 248, 127, 0) 100%
   );
 }
+
+/* used for hero bg content */
 
 .bgText {
   text-align: center;

@@ -15,7 +15,7 @@ export const cardVariants = {
 export default function CardAnimate({ children, x = 0, y = 0 }) {
   return (
     <motion.div
-      className="absolute overflow-hidden hidden md:block z-20"
+      className="absolute overflow-hidden z-20"
       variants={cardVariants}
       initial="hidden"
       whileInView="visible"
