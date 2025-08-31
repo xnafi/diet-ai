@@ -3,7 +3,7 @@
 :root {
   --background: #ffffff;
   --primaryColor: #606483;
-  --secondaryColor: #CDF87F;
+  --secondaryColor: #cdf87f;
   --infoColor: #121213;
 }
 html {
@@ -11,7 +11,7 @@ html {
 }
 @layer utilities {
   .container {
-    @apply max-w-[1296px] px-4 py-10 mx-auto ;
+    @apply max-w-[1296px] px-4 py-10 mx-auto;
   }
   .secondaryColor {
     @apply text-[#CDF87F];
@@ -49,9 +49,26 @@ html {
   }
 }
 
-
 body {
   background: #ffffff !important;
   color: black;
 }
 
+
+.bgWrap {
+  z-index: -1;
+    --c: 70px;
+  mask: radial-gradient(60% var(--c) at top,#0000 calc(100% - 1px),#000);
+  padding-top: 10px;
+  background: linear-gradient(
+    100deg,
+    rgba(205, 248, 127, 0.1) 0%,
+    rgba(205, 248, 127, 0) 100%
+  );
+}
+
+.bgText {
+  text-align: center;
+  width: full;
+  height: full;
+}
