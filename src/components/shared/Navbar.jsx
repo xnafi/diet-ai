@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo.svg";
 import Button from "../buttons/Button";
 import InfoBar from "./InfoBar";
 
@@ -36,7 +36,7 @@ const Navbar = () => {
       <InfoBar />
       {/* nav bar */}
       <nav className="w-full z-50">
-        <div className="container !py-4 mx-auto flex items-center justify-between relative">
+        <div className="container mx-auto flex items-center justify-between relative">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <Image
@@ -99,7 +99,7 @@ const Navbar = () => {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex">
-            <Button textPl={6}>Start For Free</Button>
+            <Button text="Start For Free" />
           </div>
 
           {/* Mobile Menu */}
@@ -204,7 +204,7 @@ const Navbar = () => {
                     )}
                   </div>
                 ))}
-                <Button textPl={7}>Start For Free</Button>
+                <Button text="Start For Free" />
               </nav>
             </div>
           </div>

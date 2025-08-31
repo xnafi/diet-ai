@@ -6,7 +6,7 @@ import { FaArrowRight } from "react-icons/fa6";
 export default function DownloadNow() {
   return (
     <section className="bg-[#FCFCFC]">
-      <div className="container grid md:grid-cols-2 gap-10 items-center">
+      <div className="container grid md:grid-cols-2 gap-10 items-center overflow-hidden">
         {/* Left Content */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
