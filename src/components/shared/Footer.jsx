@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-white border-t border-gray-200">
+    <footer className="bg-white">
       <div className="container grid md:flex justify-between gap-8 text-sm">
         {/* Logo + Intro */}
         <div className="md:col-span-1 space-y-4 max-w-sm">
