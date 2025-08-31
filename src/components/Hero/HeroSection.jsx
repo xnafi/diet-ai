@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Button from "../buttons/Button";
-import phone from "../../assets/phone.svg";
+import phone from "../../assets/phone.png";
 import Nutrition from "../../assets/Nutrition.svg";
 import calories from "../../assets/calories.svg";
 import Carbohydrate from "../../assets/Carbohydrates.svg";

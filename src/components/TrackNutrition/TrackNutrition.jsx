@@ -1,7 +1,7 @@
 import Image from "next/image";
 import CardAnimate from "@/utils/CardAnimate";
 import NutritionCard from "./NutritionCard";
-import photoRecognition from "../../assets/photoRecognition.svg";
+import photoRecognition from "../../assets/photoRecognition.png";
 import phone from "../../assets/iPhone.svg";
 import currentWeight from "../../assets/currentWeight.svg";
 import targetWeight from "../../assets/targetWeight.svg";
@@ -48,7 +48,7 @@ export default function TrackNutrition() {
         >
           <div className="relative flex justify-center items-center mt-2 lg:mt-2 w-full px-4 overflow-hidden">
             {/* Phone Placeholder */}
-            <div className="relative w-full h-full flex items-center justify-center z-10 overflow-hidden mask-y-from-[80%] mask-y-to-[99%]">
+            <div className="relative w-full h-full flex items-center justify-center z-10 overflow-hidden">
               <Image
                 src={photoRecognition}
                 height={228}
