@@ -7,9 +7,7 @@ export default function DownloadNow() {
     <section className="mb-6">
       <div className="container grid md:grid-cols-2 gap-10 items-center overflow-hidden card_dropShadow px-0 lg:!px-10 bg-[#FCFCFC] rounded-md drop-shadow-[rgba(237, 237, 237, 20)] backdrop-blur-[160px]">
         {/* Left Content */}
-        <div
-          className="space-y-6 "
-        >
+        <div className="space-y-6 ">
           <h2 className="sub-heading">
             Ready to transform your nutrition? Download Now.
           </h2>
@@ -21,9 +19,7 @@ export default function DownloadNow() {
         </div>
 
         {/* Right Image (mockup phones) */}
-        <div
-          className="flex justify-center lg:justify-end lg:space-x-5 flex-col md:flex-row lg:space-y-0 space-y-6 items-center"
-        >
+        <div className="flex justify-center lg:justify-end space-x-5 flex-row  items-center">
           <Image
             src={phone1}
             alt="App Mockup"
