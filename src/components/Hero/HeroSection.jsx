@@ -14,7 +14,7 @@ export default function HeroSection() {
     <section className="relative bg-white">
       {/* Hero Content */}
       <div className="flex flex-col items-center text-center max-w-4xl mx-auto px-4 pt-12 space-y-4">
-        <span className="text-xs uppercase bg-gray-100 text-gray-600 px-3 py-1 rounded-full mb-4">
+        <span className="text-xs uppercase px-3 py-1 rounded-sm mb-4 border border-[#EDEDED] primaryColor">
           See what’s new on Diet AI
         </span>
         <h1 className="hero-heading  lg:leading-16">
@@ -35,7 +35,13 @@ export default function HeroSection() {
         <div className="flex justify-center items-center w-full px-4 overflow-hidden bgText pt-[15%] lg:mt-0  xl:pt-[10%] md:pt-[10%] lg:pt-[17%]">
           {/* Phone Placeholder */}
           <div className="w-full h-full flex items-center justify-center text-gray-500 !z-20">
-            <Image src={phone} height={770} width={500} alt="phone" quality={25}/>
+            <Image
+              src={phone}
+              height={770}
+              width={500}
+              alt="phone"
+              quality={25}
+            />
             {/* Fade Gradient at Bottom */}
           </div>
 

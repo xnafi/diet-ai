@@ -27,7 +27,7 @@ export default function TrackNutrition() {
     <section className="container">
       {/* Section Title */}
       <div className="text-center max-w-2xl mx-auto mb-12">
-        <span className="text-xs uppercase bg-gray-100 text-gray-600 px-3 py-1 rounded-full mb-4">
+        <span className="text-xs uppercase px-3 py-1 rounded-sm primaryColor border border-[#EDEDED] mb-4">
           MORE FEATURES
         </span>
         <h2 className="sub-heading mt-2">
@@ -66,7 +66,7 @@ export default function TrackNutrition() {
               <Image src={carbs} alt="carbs" height={48} width={157} />
             </CardAnimate>
             {/* Floating Card Avocado*/}
-            <CardAnimate x={-150} y={100}>
+            <CardAnimate x={-150} y={80}>
               <Image src={egg} alt="egg" height={99} width={232} />
             </CardAnimate>
             {/* Floating Card Protein*/}
