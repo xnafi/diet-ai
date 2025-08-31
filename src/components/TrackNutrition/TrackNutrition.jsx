@@ -48,7 +48,7 @@ export default function TrackNutrition() {
         >
           <div className="relative flex justify-center items-center mt-2 lg:mt-2 w-full px-4 overflow-hidden">
             {/* Phone Placeholder */}
-            <div className="relative w-full h-full flex items-center justify-center z-10 overflow-hidden">
+            <div className="relative w-full h-full flex items-center justify-center z-10 overflow-hidden mask-y-from-[80%] mask-y-to-[99%]">
               <Image
                 src={photoRecognition}
                 height={228}

@@ -35,7 +35,7 @@ export default function HeroSection() {
         <div className="flex justify-center items-center w-full px-4 overflow-hidden bgText pt-[15%] lg:mt-0  xl:pt-[10%] md:pt-[10%] lg:pt-[17%]">
           {/* Phone Placeholder */}
           <div className="w-full h-full flex items-center justify-center text-gray-500 !z-20">
-            <Image src={phone} height={770} width={500} alt="phone" />
+            <Image src={phone} height={770} width={500} alt="phone" quality={25}/>
             {/* Fade Gradient at Bottom */}
           </div>
 
