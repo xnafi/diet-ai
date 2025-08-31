@@ -1,19 +1,13 @@
-import * as motion from "motion/react-client";
 import Image from "next/image";
 import phone1 from "../../assets/iPhone1.svg";
 import phone2 from "../../assets/iPhone2.svg";
-import { FaArrowRight } from "react-icons/fa6";
 import Button from "../buttons/Button";
 export default function DownloadNow() {
   return (
     <section className="mb-6">
       <div className="container grid md:grid-cols-2 gap-10 items-center overflow-hidden card_dropShadow px-0 lg:!px-10 bg-[#FCFCFC] rounded-md drop-shadow-[rgba(237, 237, 237, 20)] backdrop-blur-[160px]">
         {/* Left Content */}
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true }}
+        <div
           className="space-y-6 "
         >
           <h2 className="sub-heading">
@@ -24,14 +18,10 @@ export default function DownloadNow() {
             with AI-powered nutrition tracking.
           </p>
           <Button text={"Download on App Store"} />
-        </motion.div>
+        </div>
 
         {/* Right Image (mockup phones) */}
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          viewport={{ once: true }}
+        <div
           className="flex justify-center lg:justify-end lg:space-x-5 flex-col md:flex-row lg:space-y-0 space-y-6 items-center"
         >
           <Image
@@ -48,7 +38,7 @@ export default function DownloadNow() {
             height={580}
             className="rounded-xl shadow-lg"
           />
-        </motion.div>
+        </div>
       </div>
     </section>
   );

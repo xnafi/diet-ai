@@ -8,18 +8,17 @@ export const cardVariants = {
     y: custom.y,
     opacity: 1,
     scale: 1,
-    transition: { duration: 1.7, ease: "easeOut" },
+    transition: { duration: 0.1, ease: "easeOut" },
   }),
 };
 
 export default function CardAnimate({ children, x = 0, y = 0 }) {
   return (
     <motion.div
-      className="absolute overflow-hidden z-20"
+      className="absolute overflow-hidden hidden lg:block z-20"
       variants={cardVariants}
       initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
+      animate="visible"
       custom={{ x, y }}
     >
       {children}

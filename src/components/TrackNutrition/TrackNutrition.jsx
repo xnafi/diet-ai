@@ -10,6 +10,10 @@ import FoodDetail from "../../assets/FoodDetail.svg";
 import calories from "../../assets/calories.svg";
 import muscle from "../../assets/muscle.svg";
 import abs from "../../assets/abs.svg";
+import fats from "../../assets/fats.svg";
+import carbs from "../../assets/carbs.svg";
+import egg from "../../assets/egg.svg";
+import protein from "../../assets/protein.svg";
 import Carbohydrates from "../../assets/Carbohydrates.svg";
 import proteinCard from "../../assets/proteinCard.svg";
 import fatCard from "../../assets/fatCard.svg";
@@ -55,32 +59,19 @@ export default function TrackNutrition() {
 
             {/* Floating Card Fats */}
             <CardAnimate x={-150} y={-100}>
-              <div className="bg-white space-x-2 text-xs px-2 py-3 border rounded flex justify-center items-center peraText">
-                <TbMeat className="mr-1" /> Fats 42 gr
-              </div>
+              <Image src={fats} alt="fats" height={48} width={157} />
             </CardAnimate>
             {/* Floating Card Carbs*/}
             <CardAnimate x={150} y={-100}>
-              <div className="bg-white space-x-2 text-xs px-2 py-3 border rounded flex justify-center items-center peraText">
-                <PiBreadLight className="mr-1" /> Carbs 52 gr
-              </div>
+              <Image src={carbs} alt="carbs" height={48} width={157} />
             </CardAnimate>
             {/* Floating Card Avocado*/}
             <CardAnimate x={-150} y={100}>
-              <div className="bg-white space-y-2 flex-col text-xs px-2 py-3 border rounded flex justify-center items-center peraText">
-                Whole-wheat toast with <br />
-                avocado and poached eggs
-                <div className="!flex justify-center items-center mt-2">
-                  <LiaBurnSolid className="" />
-                  <span>120-140 kcal 100 gr</span>
-                </div>
-              </div>
+              <Image src={egg} alt="egg" height={99} width={232} />
             </CardAnimate>
             {/* Floating Card Protein*/}
             <CardAnimate x={150} y={100}>
-              <div className="bg-white space-x-2 text-xs px-2 py-3 border rounded flex justify-center items-center peraText">
-                <TbMeat className="mr-1" /> Protein 67 gr
-              </div>
+              <Image src={protein} alt="protein" height={48} width={157} />
             </CardAnimate>
           </div>
         </NutritionCard>
@@ -206,7 +197,7 @@ export default function TrackNutrition() {
               <Image
                 src={FoodDetail}
                 height={228}
-                width={300}
+                width={340}
                 alt="Food Details"
               />
               {/* Fade Gradient at Bottom */}

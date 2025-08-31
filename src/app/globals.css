@@ -74,7 +74,9 @@ body {
   width: full;
   height: full;
 }
+/* card drop shadow */
 .card_dropShadow {
   box-shadow: 0px 0px 0px 1px #ededed;
   box-shadow: 0px 1px 1px 1px #1b3e2d0f;
 }
+
