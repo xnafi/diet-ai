@@ -1,16 +1,18 @@
 import Image from "next/image";
 import CardAnimate from "@/utils/CardAnimate";
 import NutritionCard from "./NutritionCard";
-import photoRecognition from "../../assets/photoRecognition.png";
-import phone from "../../assets/iPhone.png";
-import currentWeight from "../../assets/currentWeight.png";
-import targetWeight from "../../assets/targetWeight.png";
-import startingWeight from "../../assets/startingWeight.png";
-import FoodDetail from "../../assets/FoodDetail.png";
+import photoRecognition from "../../assets/photoRecognition.svg";
+import phone from "../../assets/iPhone.svg";
+import currentWeight from "../../assets/currentWeight.svg";
+import targetWeight from "../../assets/targetWeight.svg";
+import startingWeight from "../../assets/startingWeight.svg";
+import FoodDetail from "../../assets/FoodDetail.svg";
 import calories from "../../assets/calories.svg";
+import muscle from "../../assets/muscle.svg";
+import abs from "../../assets/abs.svg";
 import Carbohydrates from "../../assets/Carbohydrates.svg";
-import proteinCard from "../../assets/proteinCard.png";
-import fatCard from "../../assets/fatCard.png";
+import proteinCard from "../../assets/proteinCard.svg";
+import fatCard from "../../assets/fatCard.svg";
 import { TbMeat } from "react-icons/tb";
 import { PiBreadLight } from "react-icons/pi";
 import { LiaBurnSolid } from "react-icons/lia";
@@ -42,14 +44,13 @@ export default function TrackNutrition() {
         >
           <div className="relative flex justify-center items-center mt-2 lg:mt-2 w-full px-4 overflow-hidden">
             {/* Phone Placeholder */}
-            <div className="relative w-full h-full flex items-center justify-center z-10 overflow-hidden mask-y-from-[80%] mask-y-to-[99%]">
+            <div className="relative w-full h-full flex items-center justify-center z-10 overflow-hidden">
               <Image
                 src={photoRecognition}
                 height={228}
                 width={251}
                 alt="photoRecognition"
               />
-              {/* Fade Gradient at Bottom */}
             </div>
 
             {/* Floating Card Fats */}
@@ -120,8 +121,8 @@ export default function TrackNutrition() {
                 <Image
                   src={currentWeight}
                   alt="current Weight"
-                  height={242}
-                  width={365}
+                  height={272}
+                  width={300}
                 />
               </div>
             </CardAnimate>
@@ -143,7 +144,7 @@ export default function TrackNutrition() {
                 <div className="flex justify-between items-center flex-col lg:flex-row space-y-3 lg:space-y-0">
                   <div className="flex space-x-2">
                     <span className="p-4 rounded-full secondaryColorBg text-2xl">
-                      🦾
+                      <Image src={muscle} alt="muscle" height={33} width={33} />
                     </span>
                     <div className="flex flex-col space-y-1 text-left">
                       <span className="text-lg primaryColor font-medium">
@@ -168,7 +169,7 @@ export default function TrackNutrition() {
               <div className="flex justify-between items-center bg-[#F8FAFB] p-4 rounded-md shadow-md flex-col lg:flex-row space-y-3 lg:space-y-0">
                 <div className="flex space-x-2">
                   <span className="p-4 rounded-full secondaryColorBg text-2xl">
-                    🦾
+                    <Image src={abs} alt="abs" height={33} width={33} />
                   </span>
                   <div className="flex flex-col space-y-1 text-left">
                     <span className="text-lg primaryColor font-medium">
@@ -235,12 +236,7 @@ export default function TrackNutrition() {
             </CardAnimate>
             {/* Floating fat card*/}
             <CardAnimate x={-90} y={120}>
-              <Image
-                src={fatCard}
-                alt="fat Card"
-                height={112}
-                width={122}
-              />
+              <Image src={fatCard} alt="fat Card" height={112} width={122} />
             </CardAnimate>
           </div>
         </NutritionCard>

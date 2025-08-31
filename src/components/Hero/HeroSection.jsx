@@ -26,7 +26,7 @@ export default function HeroSection() {
           goals effortlessly.
         </p>
         <div className="max-w-2xl">
-          <Button>{"Download on App Store"}</Button>
+          <Button text={"Download on App Store"} />
         </div>
       </div>
 
